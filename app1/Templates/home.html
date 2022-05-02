@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <style>
+        .up{
+            text-align: center;
+        }
+        .file li{
+            margin-left: auto;
+            margin-right: auto;
+            display: inline-block;
+            position: relative;
+
+            }
+        .sf{
+            color: rgb(71, 8, 187);
+        }
+        .sub{
+            background-color: rgb(63, 116, 216);
+            align-items: center;
+            margin-top: 3px;
+            color: white;
+            position: relative;
+        }
+        .sub:hover{
+            background-color:white;
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+    <div class="up">
+    <h1>Welcome!</h1>
+    <div class="file">
+        <form action="upload" method="POST" enctype="multipart/form-data">{% csrf_token %}
+            <ul>
+            <li>
+             <p class="sf">Select Your Image :</p>
+            </li>
+            <li>
+            <input type="file"  name="csv_file"/>
+            </li>
+            <br>
+            <br>
+            <input type="submit" class="sub" value="submit"  >
+            </ul>
+        </form>
+        </div>
+    </div>
+
+</body>
+</html>
